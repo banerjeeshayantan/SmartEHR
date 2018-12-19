@@ -1,0 +1,123 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+
+<style type="text/css">
+		body{
+	font:15px/2.5 Arial, Helvetica,sans-serif;
+}
+		.spinner-1:before{
+			content: "";
+			box-sizing: border-box;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			height: 60px;
+			width: 60px;
+			margin-top: -30px;
+			margin-left: -30px;
+			border-radius: 50%;
+			border:6px solid transparent;
+			border-top-color: #0091EA;
+			animation: spinner 0.7s linear infinite;
+		}
+		@keyframes spinner {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+		li { background-color:#ECD9D9; }
+		li:nth-child(odd) { background-color:#ECD9D9; }
+		</style>
+	
+</div>
+	
+<div class="container">
+  <div class="jumbotron vertical-center">
+  	<div class="row justify-content-center">
+    <h1 align="center">SmartEHR</h1> 
+    <p align="center">A predictive analytics approach to analyze free text clinical notes</p> 
+  </div>
+</div>
+ </div>
+<div class="container">
+	<form method="POST" action="{{ url_for('analyse')}}" id="myForm">
+		
+
+		<label >Enter Your Text Below</label>
+    <textarea class="form-control" rows="3" cols="2" name="rawtext" required="true"></textarea>
+
+    <input type="submit" onclick="myAnalyser()" value="Submit" class="btn btn-primary ">
+    <input type="button" onclick="myFunction()" value="Clear" class="btn btn-outline-dark">
+    <a href="{{ url_for('index')}}" type="button" class="btn btn-danger" > Reset</a>
+    
+	</form>
+	
+</div>
+</br>
+<div class="container">
+	<div class="card">
+		<div>
+			<b> 30-day readmission chances:  </b>
+			<p> {{thirty}} </p>
+		
+
+		
+	</div>
+
+	</div>
+		
+
+</div>	
+</br>
+<div class="container">
+	<div class="card">
+		<div>
+			<b> The top 10 most probable diagnoses are: </b>
+			{% for i in diag_codes %}
+		<ul class="list-unstyled">
+   			<li>{{i}}
+				<a href="https://www.hipaaspace.com/medical_billing/coding/icd-9/diagnosis/{{i}}" target="blank_" type="button" class="btn btn-primary">View</a>
+			</li>
+		</ul>
+			{%endfor%}
+		</div>
+	</div>
+	<hr/>
+	<div class="card-body" >
+		<b> The top 20 keywords very specific to the document are : </b>
+		{% for i in keywords %}
+	<ul class="list-unstyled">
+		<li>{{i}}</li>
+	</ul>
+		{%endfor%}
+
+		
+	</div>
+
+	</div>
+</br>
+<!-- Footer -->
+  <footer class="text-center">
+      <div>
+          <p>&copy; Shayantan Banerjee </p>
+      </div>        
+      <div>
+          <a href="mailto:abc@core.com">bt16s001@smail.iitm.ac.in</a>
+      </div>
+ </footer>
+
+
+	
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
