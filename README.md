@@ -38,6 +38,8 @@ Open test_1 for instance and copy the text. Paste it in the area to enter the te
 
 **Shayantan Banerjee** 
 ## Demo
-![SmartEHR demo](Peek 2019-03-04 18-00.gif)
+![SmartEHR demo](
+        SmartEHR/Peek 2019-03-04 18-00.gif
+      )
 
 
