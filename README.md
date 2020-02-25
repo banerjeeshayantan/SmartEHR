@@ -38,6 +38,6 @@ Open test_1 for instance and copy the text. Paste it in the area to enter the te
 
 **Shayantan Banerjee** 
 ## Demo
-![Smart-EHR demo](https://gifyu.com/image/7acP)
+![Smart-EHR demo](3q7kqo.gif)
 
 
