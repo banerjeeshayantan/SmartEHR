@@ -38,6 +38,6 @@ Open test_1 for instance and copy the text. Paste it in the area to enter the te
 
 **Shayantan Banerjee** 
 ## Demo
-![Smart-EHR demo](https://rbc-dsai-iitm.github.io/news/2019/01/11/Shaastra-AI-Challenge.html)
+[Smart-EHR demo](https://rbc-dsai-iitm.github.io/news/2019/01/11/Shaastra-AI-Challenge.html)
 
 
