@@ -34,10 +34,9 @@ Open test_1 for instance and copy the text. Paste it in the area to enter the te
 * [sklearn](https://scikit-learn.org/) - Machine learning 
 
 
-## Authors
+## Author
 
 **Shayantan Banerjee** 
-## Demo
-[Smart-EHR demo](https://github.com/banerjeeshayantan/SmartEHR/blob/master/3q7kqo.gif)
+
 
 
